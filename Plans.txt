@@ -1,2 +1,4 @@
 Settle on a good color scheme
+Create About and Projects pages
+Add clickable icons
 
