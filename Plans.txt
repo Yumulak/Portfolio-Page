@@ -1,4 +1,5 @@
-Settle on a good color scheme
-Create About and Projects pages
-Add clickable icons
+Settle on a good color scheme-done
+Create About and Projects pages-in progress
+Get footer to stay at bottom of pages-done
+Add clickable icons for education, project-in progress
 
