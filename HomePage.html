@@ -21,12 +21,12 @@
         document.createElement("nav");
     </script>
     <!-- Favicons -->
-    <link rel="android-chrome-icon" sizes="512x512" href="assets\icons\favicon\android-chrome-512x512.png">
-    <link rel="android-chrome-icon" sizes="192x192" href="assets\icons\favicon\android-chrome-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets\icons\favicon\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets\icons\favicon\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets\icons\favicon\favicon-16x16.png">
-    <link rel="manifest" href="assets\icons\favicon\site.webmanifest">
+    <link rel="icon" sizes="512x512" href="assets/icons/favicon/android-chrome-512x512.png">
+    <link rel="icon" sizes="192x192" href="assets/icons/favicon/android-chrome-192x192.png">
+    <link rel="icon" sizes="180x180" href="assets/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -195,16 +195,16 @@
             <h2>Contact Me</h2>
             <div class="contact-form-container">
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xoqzqakb" method="POST">
+                    <form autocomplete="off" action="https://formspree.io/f/xoqzqakb" method="POST">
                         <div class="form-control">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="sender-name" placeholder="Enter your name"
-                                class="input-field" required />
+                            <input autofocus autocomplete="on" type="text" id="name" name="sender-name"
+                                placeholder="Enter your name" class="input-field" required />
                         </div>
                         <div class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="sender-email" placeholder="Enter your email"
-                                class="input-field" required />
+                            <input autocomplete="on" type="email" pattern="^.+@.+$" id="email" name="sender-email"
+                                placeholder="Enter your email" class="input-field" required />
                         </div>
                         <div class="form-control">
                             <label for="message">Message</label>
@@ -212,10 +212,22 @@
                                 class="input-field" required></textarea>
                         </div>
                         <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
+                        <input type="reset" id="reset-btn" class="reset-btn" />
                     </form>
                 </div>
             </div>
         </section>
+        <!--The map -->
+        <div id="map"></div>
+        <!-- 
+        The `defer` attribute causes the callback to execute after the full HTML
+        document has been parsed. For non-blocking uses, avoiding race conditions,
+        and consistent behavior across browsers, consider loading using Promises
+        with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+        -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByyn0_GgMGRYv6ra71L6H8_tHd3LHuLFA&callback=initMap&v=weekly"
+            defer></script>
         <!-- social icons -->
         <div class="socials">
             <a href="https://www.linkedin.com/in/austin-rhodes-600aa8203/" target="_blank"><img

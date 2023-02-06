@@ -314,6 +314,30 @@ nav ul li {
     cursor: pointer;
 }
 
+.reset-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+.reset-btn:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 /* social icons */
 .socials {
     display: flex;
@@ -371,6 +395,95 @@ footer {
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 10px;
+}
+
+/* media queries for 800px breakpoint*/
+@media screen and (max-width: 800px) {
+
+    /* reduce padding of navbar */
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    /* build and control hamburger menu */
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+        border: 2px outset rgb(108, 108, 108);
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    /* format hero section */
+    .hero {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero img {
+        height: 37.5rem;
+        width: 30rem;
+    }
+
+    .bio {
+        margin-top: 2rem;
+        width: 20.5rem;
+    }
+
+    /* format more about me section */
+    .more-about {
+        margin-top: 2rem;
+        padding: 1rem 3.5rem;
+    }
+
+    .more-about h2 {
+        text-align: center;
+    }
+
+    .more-about p {
+        text-align: justify;
+
+    }
+
+    /* format skill icons */
+    .icon {
+        width: 5.875rem;
+        height: 5.25rem;
+    }
+
+    /* format projects section */
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-container {
+        width: 20.875rem;
+    }
+
+    /* format contact form */
+    .contact-form-container {
+        max-width: 23.75rem;
+    }
+
+
 }
 
 /* media queries for 720px breakpoint*/

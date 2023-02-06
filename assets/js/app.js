@@ -45,3 +45,22 @@ function drop(ev) {
     // window.open(href, "_blank");
     ev.preventDefault();
 }
+
+// my location in google maps
+// Initialize and add the map
+function initMap() {
+    // The location of my location
+    const myLocation = { lat: 34.923564, lng: -120.444928 };
+    // The map, centered at my location
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 8,
+        center: myLocation,
+    });
+    // The marker, positioned at my location
+    const marker = new google.maps.Marker({
+        position: myLocation,
+        map: map,
+    });
+}
+
+window.initMap = initMap;
