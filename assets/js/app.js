@@ -50,7 +50,7 @@ function drop(ev) {
 // Initialize and add the map
 function initMap() {
     // My location
-    const myLocation = { lat: 34.923564, lng: -120.444928 };
+    const myLocation = { lat: 35.975433272012445, lng: -78.90654808359488 }; 
     // The map, centered at my location
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
